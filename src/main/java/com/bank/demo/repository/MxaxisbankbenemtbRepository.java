@@ -11,6 +11,10 @@ import com.bank.demo.model.Mxaxisbankbenemtb;
 public interface MxaxisbankbenemtbRepository extends JpaRepository<Mxaxisbankbenemtb, Integer> {
 	
 		
-	/* @Query("SELECT BENE_ID FROM mxaxisbankbenemtb WHERE customer_id = :ownCust_Id and bene_acc_no = :bene_acc_no")
-	 public ArrayList<String> checkBeneExist(String ownCust_Id, String bene_acc_no);*/
+	@Query(value="SELECT axis FROM Mxaxisbankbenemtb axis WHERE axis.customer_id = ?1")
+	public ArrayList<Mxaxisbankbenemtb> searchRecipientCustId(String ownCust_Id);
+	
+	
+	@Query(value="SELECT axis FROM Mxaxisbankbenemtb axis WHERE axis.bene_acc_no = ?1")
+	public ArrayList<Mxaxisbankbenemtb> searchRecipientAccNum(String acc_num);
 }

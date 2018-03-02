@@ -6,180 +6,181 @@ import java.sql.Timestamp;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
 
 @Entity
 @Table(name = "mxotherbankbenemtb")
 @JsonIgnoreProperties(ignoreUnknown = true)
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Mxotherbankbenemtb {
-	
-	public Mxotherbankbenemtb()
-	{
-		
-	}
-	
-	
-	@Column(name="feba_id")
-	private String feba_id;
 
-	@Column(name="bank_id")
-	private Integer bank_id;
-	
-	@Column(name="bay_user_id")
-	private String bay_user_id;
-	
-	@Column(name="db_ts")
-	private Timestamp db_ts;
-	
-	@Column(name="corporate_id")
-	private String corporate_id;
-	
+	public Mxotherbankbenemtb() {
+
+	}
+
+	@Column(name = "feba_id")
+	private String feba_id = "Feba1";
+
+	@Column(name = "bank_id")
+	private Integer bank_id = 00005;
+
+	@Column(name = "bay_user_id")
+	private String bay_user_id = "Bay_1";
+
+	@Column(name = "db_ts")
+	private Timestamp db_ts = new Timestamp(System.currentTimeMillis());
+
+	@Column(name = "corporate_id")
+	private String corporate_id = "C001";
+
 	@Id
-	@Column(name="bene_id")
+	@Column(name = "bene_id")
 	private Integer bene_id;
-	
-	@Column(name="reg_mobile_no")
-	private String reg_mobile_no;
-	
-	@Column(name="free_field_1")
-	private String free_field_1;
-	
-	@Column(name="free_field_2")
-	private String free_field_2;
-	
-	@Column(name="free_field_3")
-	private String free_field_3;
-	
-	@Column(name="free_flg1")
-	private char free_flg1;
-	
-	@Column(name="free_flg2")
-	private char free_flg2;
-	
-	@Column(name="is_del_flag")
-	private char is_del_flag;
-	
-	@Column(name="mod_by")
-	private String mod_by;
-	
-	@Column(name="mod_on")
-	private Date mod_on;
-	
-	@Column(name="created_by")
-	private String created_by;
-	
-	@Column(name="created_on")
-	private Date created_on;
-	
-	@Column(name="consumer_code")
-	private String consumer_code;
-	
-	@Column(name="bene_status")
-	private String bene_status;
-	
-	@Column(name="autopay_flg")
-	private char autopay_flg;
-	
-	@Column(name="autopay_amt")
-	private Integer autopay_amt;
-	
-	@Column(name="autopay_crn")
-	private String autopay_crn;
-	
-	@Column(name="autopay_acid")
-	private String autopay_acid;
-	
-	@Column(name="autopay_brch_id")
-	private String autopay_brch_id;
-	
-	@Column(name="autopay_mode")
-	private char autopay_mode;
-	
-	@Column(name="bene_nick_name")
+
+	@Column(name = "reg_mobile_no")
+	private String reg_mobile_no = "9874563210";
+
+	@Column(name = "free_field_1")
+	private String free_field_1 = "NA";
+
+	@Column(name = "free_field_2")
+	private String free_field_2 = "NA";
+
+	@Column(name = "free_field_3")
+	private String free_field_3 = "NA";
+
+	@Column(name = "free_flg1")
+	private char free_flg1 = 'N';
+
+	@Column(name = "free_flg2")
+	private char free_flg2 = 'N';
+
+	@Column(name = "is_del_flag")
+	private char is_del_flag = 'F';
+
+	@Column(name = "mod_by")
+	private String mod_by = "User3";
+
+	@Column(name = "mod_on")
+	private Date mod_on = new Date(System.currentTimeMillis());
+
+	@Column(name = "created_by")
+	private String created_by = "User4";
+
+	@Column(name = "created_on")
+	private Date created_on = new Date(System.currentTimeMillis());
+
+	@Column(name = "consumer_code")
+	private String consumer_code = "ABB";
+
+	@Column(name = "bene_status")
+	private String bene_status = "Active";
+
+	@Column(name = "autopay_flg")
+	private char autopay_flg = 'F';
+
+	@Column(name = "autopay_amt")
+	private Integer autopay_amt = 0000;
+
+	@Column(name = "autopay_crn")
+	private String autopay_crn = "INR";
+
+	@Column(name = "autopay_acid")
+	private String autopay_acid = "NA";
+
+	@Column(name = "autopay_brch_id")
+	private String autopay_brch_id = "NA";
+
+	@Column(name = "autopay_mode")
+	private char autopay_mode = 'A';
+
+	@Column(name = "bene_nick_name")
 	private String bene_nick_name;
-	
-	@Column(name="bene_acc_name")
+
+	@Column(name = "bene_acc_name")
 	private String bene_acc_name;
-	
-	@Column(name="bene_acc_cat")
-	private String bene_acc_cat;
-	
-	@Column(name="bene_acc_type")
-	private String bene_acc_type;
-	
-	@Column(name="bene_acc_currency")
-	private String bene_acc_currency;
-	
-	@Column(name="bene_acc_no")
+
+	@Column(name = "bene_acc_cat")
+	private String bene_acc_cat = "Savings";
+
+	@Column(name = "bene_acc_type")
+	private String bene_acc_type = "Saving";
+
+	@Column(name = "bene_acc_currency")
+	private String bene_acc_currency = "INR";
+
+	@Column(name = "bene_acc_no")
 	private String bene_acc_no;
-	
-	@Column(name="bene_branch_id")
-	private String bene_branch_id;
-	
-	@Column(name="customer_id")
-	private String customer_id;
-	
-	@Column(name="bene_detl_updated_on")
-	private Date bene_detl_updated_on;
-	
-	@Column(name="group_id")
-	private String group_id;
-	
-	@Column(name="channel_id")
-	private String channel_id;
-	
-	@Column(name="device_detail")
-	private String device_detail;
-	
-	@Column(name="ip_address")
-	private String ip_address;
-	
-	@Column(name="lang_code")
-	private String lang_code;
-	
-	@Column(name="device_os_type")
-	private String device_os_type;
-	
-	@Column(name="device")
-	private String device;
-	
-	@Column(name="app_version")
-	private String app_version;
-	
-	@Column(name="bene_ifsc_code")
-	private String bene_ifsc_code;
-	
-	@Column(name="bene_mobile_no")
-	private String bene_mobile_no;
-	
-	@Column(name="bene_addition_dt")
-	private String bene_addition_dt;
-	
-	@Column(name="bene_bank_name")
+
+	@Column(name = "bene_branch_id")
+	private String bene_branch_id = "AXIS006";
+
+	@Column(name = "customer_id")
+	private String customer_id = "12345";
+
+	@Column(name = "bene_detl_updated_on")
+	private Date bene_detl_updated_on = new Date(System.currentTimeMillis());
+
+	@Column(name = "group_id")
+	private String group_id = "NA";
+
+	@Column(name = "channel_id")
+	private String channel_id = "AOC";
+
+	@Column(name = "device_detail")
+	private String device_detail = "IOS";
+
+	@Column(name = "ip_address")
+	private String ip_address = "192.145.63.22";
+
+	@Column(name = "lang_code")
+	private String lang_code = "ENG";
+
+	@Column(name = "device_os_type")
+	private String device_os_type = "AND";
+
+	@Column(name = "device")
+	private String device = "S4";
+
+	@Column(name = "app_version")
+	private String app_version = "4.5";
+
+	@Column(name = "bene_ifsc_code")
+	private String bene_ifsc_code = "NA";
+
+	@Column(name = "bene_mobile_no")
+	private String bene_mobile_no = "1234567890";
+
+	@Column(name = "bene_addition_dt")
+	private String bene_addition_dt = String.valueOf(new Date(System
+			.currentTimeMillis()));
+
+	@Column(name = "bene_bank_name")
 	private String bene_bank_name;
-	
-	@Column(name="bene_state_name")
-	private String bene_state_name;
-	
-	@Column(name="bene_branch_dtl")
-	private String bene_branch_dtl;
-	
-	@Column(name="cooling_period")
-	private Integer cooling_period;
-	
-	@Column(name="bene_payee_type")
-	private String bene_payee_type;
-	
-	@Column(name="bene_mmid")
-	private String bene_mmid;
-	
-	@Column(name="bene_country_code")
-	private String bene_country_code;
-	
-	
+
+	@Column(name = "bene_state_name")
+	private String bene_state_name = "TN";
+
+	@Column(name = "bene_branch_dtl")
+	private String bene_branch_dtl = "NA";
+
+	@Column(name = "cooling_period")
+	private Integer cooling_period = 0;
+
+	@Column(name = "bene_payee_type")
+	private String bene_payee_type = "Saving";
+
+	@Column(name = "bene_mmid")
+	private String bene_mmid = "112";
+
+	@Column(name = "bene_country_code")
+	private String bene_country_code = "IND";
+
 	public String getBene_addition_dt() {
 		return bene_addition_dt;
 	}
